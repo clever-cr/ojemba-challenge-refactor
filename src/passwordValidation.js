@@ -29,4 +29,5 @@ export default function isValidPassword(password = "") {
   const setOfPassword = new Set([...password]);
   if (setOfPassword.size < 4) return false;
   return true;
+
 }

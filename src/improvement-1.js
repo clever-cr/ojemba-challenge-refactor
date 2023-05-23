@@ -6,7 +6,5 @@
 
 // FUNCTION 1
 export default function countR(input) {
-  let count = 0
-  for (let i of input) if (i === "R") count++
-  return count;
+  return input.split("").filter((element) => element === "R").length
 }

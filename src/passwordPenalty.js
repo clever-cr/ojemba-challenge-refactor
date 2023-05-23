@@ -19,12 +19,5 @@ export default function penaltyPoints(password = "") {
       consec += 1;
     }
   }
-
-  if (consec == 2) {
-    return 1;
-  } else if (consec >= 3) {
-    return 2;
-  } else {
-    return 0;
-  }
+  return consec === 2 ? 1 : consec >= 3 ? 2 : 0
 }

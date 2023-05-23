@@ -6,7 +6,5 @@
 
 // FUNCTION 2
 export default function processItems(items) {
-  const processedItems = [];
-  for (let item of items) if (item.type === "Food") processedItems.push(item)
-  return processedItems;
+  return items.filter((item) => item.type === 'Food');
 }
