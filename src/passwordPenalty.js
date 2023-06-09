@@ -13,18 +13,11 @@ export default function penaltyPoints(password = "") {
   if (typeof password !== "string") password = String(password);
 
 
-  let consec = 0;
+  let characterSequence = 0;
   for (let i = 0; i <= password.length; i++) {
     if (password[i] === password[i + 1]) {
-      consec += 1;
+      characterSequence += 1;
     }
   }
-
-  if (consec == 2) {
-    return 1;
-  } else if (consec >= 3) {
-    return 2;
-  } else {
-    return 0;
-  }
+  return characterSequence === 2 ? 1 : characterSequence >= 3 ? 2 : 0
 }
